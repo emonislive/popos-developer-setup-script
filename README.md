@@ -2,7 +2,6 @@
 
 This is an all-in-one setup script designed to quickly configure a comprehensive development environment on Pop!_OS (and other Ubuntu-based distros). It installs popular programming languages, tools, IDEs, databases, container platforms, and utilities to help you start coding right away.
 
----
 
 ## What It Supports
 
@@ -42,7 +41,7 @@ This setup is ideal for:
   - VS Code, IntelliJ IDEA, PyCharm, WebStorm
   - Obsidian (Markdown notes), Zoom, OBS, Discord
 
----
+
 
 ## Features & Versions Installed
 
@@ -123,6 +122,9 @@ This setup is ideal for:
    ./full_development_setup.sh
    ```
 4. Restart your computer after completion to apply all changes.
+   ```bash
+   sudo reboot now
+   ```
 
 ## Notes
 
