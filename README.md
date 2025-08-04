@@ -78,4 +78,5 @@ Installed from Flathub:
    chmod +x full_development_setup.sh
    ./full_development_setup.sh
    ```
-### Note: Use sudo only when prompted. The script will handle privilege elevation as needed.
+3. Note: 
+- Use `sudo` only when prompted. The script will handle privilege elevation as needed.
