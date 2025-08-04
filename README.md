@@ -2,7 +2,7 @@
 
 This script automates the installation and configuration of a complete developer environment on a fresh Pop!_OS installation.
 
-## 🔧 Features
+## Features
 
 - Installs essential APT packages, Flatpak, Snap, and SDK tools
 - Automatically checks for existing installations and skips them
@@ -12,7 +12,7 @@ This script automates the installation and configuration of a complete developer
 
 ---
 
-## 📦 Included in the Setup
+## Included in the Setup
 
 ### APT Packages
 
@@ -59,14 +59,14 @@ Installed from Flathub:
 
 ---
 
-## 🖥️ System Requirements
+## System Requirements
 
 - Pop!_OS 22.04 or newer
 - Internet connection
 
 ---
 
-## 📜 Usage
+## Usage
 
 1. Clone the repository:
    ```bash
