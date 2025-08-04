@@ -1,135 +1,81 @@
-# Pop!_OS Full Developer Setup Script
+# Pop!_OS Developer Setup Script
 
-This is an all-in-one setup script designed to quickly configure a comprehensive development environment on Pop!_OS (and other Ubuntu-based distros). It installs popular programming languages, tools, IDEs, databases, container platforms, and utilities to help you start coding right away.
+This script automates the installation and configuration of a complete developer environment on a fresh Pop!_OS installation.
 
+## 🔧 Features
 
-## What It Supports
+- Installs essential APT packages, Flatpak, Snap, and SDK tools
+- Automatically checks for existing installations and skips them
+- If a package is outdated, removes and installs the latest version
+- Non-blocking: skips failed installations and suggests manual intervention
+- Lists all installed packages and their versions
 
-This setup is ideal for:
+---
 
-- **Full-Stack Web Development**
-  - Node.js, npm, Java (Spring Boot), Kotlin, Python (Django/Flask), Go, Rust
-  - PostgreSQL, MySQL, MongoDB
-  - Docker, Podman, Docker Compose
+## 📦 Included in the Setup
 
-- **Mobile App Development**
-  - Android Studio
-  - Flutter (via Snap)
-  - Java, Kotlin SDKs
+### APT Packages
 
-- **Desktop App Development**
-  - C#, .NET 7 SDK
-  - Python GUI frameworks
-  - Electron (via Node.js)
+- `git`, `curl`, `build-essential`, `g++`, `gcc`, `cmake`
+- `openjdk-21-jdk`, `maven`, `gradle`, `unzip`, `zip`
+- `gnome-tweaks`, `apt-transport-https`, `python3`, `python3-pip`, `python3-venv`
+- `zsh`, `gufw`, `mysql-server`, `nodejs`, `npm`
+- `php`, `composer`, `btop`, `fastfetch` (via PPA)
+- `sdkman` (to manage Java, Kotlin, etc.)
 
-- **System & Low-Level Development**
-  - GCC/G++, Make (`build-essential`)
-  - Zig, Rust, C, C++
-  - Fastfetch for system info
+### Flatpak Apps
 
-- **Machine Learning / Data Science**
-  - Python, pip, venv, Miniconda (latest)
-  - Jupyter support (via Conda)
-  - PostgreSQL, MongoDB integration
+Installed from Flathub:
+- Visual Studio Code
+- IntelliJ IDEA Community
+- PyCharm Community
+- WebStorm
+- Android Studio
+- VLC
+- Discord
+- Flatseal
+- Telegram
+- OBS Studio
+- Obsidian
+- Zoom
+- qBittorrent
+- ZapZap
+- Warehouse
+- DBeaver Community
+- Thunderbird
 
-- **Linux & CLI Tools**
-  - Oh My Zsh terminal experience
-  - Gufw Firewall, auto-cpufreq, TLP
-  - Git, Curl, Docker CLI, Fastfetch
+### Snap Apps
 
-- **General IDE Use**
-  - VS Code, IntelliJ IDEA, PyCharm, WebStorm
-  - Obsidian (Markdown notes), Zoom, OBS, Discord
+- Todoist
 
+### Manual/Scripted Installs
 
+- **Google Chrome Dev (Unstable)**
+- **Brave Browser**
+- **Flutter SDK**
+- **Laravel Installer**
+- **TypeScript**
+- **Kotlin** (via SDKMAN)
 
-## Features & Versions Installed
+---
 
-- **Essential tools:**  
-  - Git  
-  - Curl  
-  - `build-essential` (includes GCC, G++, Make)  
-  - Zsh (set as default shell)  
-  - Gufw firewall  
+## 🖥️ System Requirements
 
-- **Languages & SDKs:**  
-  - Java 21 LTS (via SDKMAN)  
-  - Kotlin (latest via SDKMAN)  
-  - C# (.NET SDK 7.0)  
-  - Rust (via rustup)  
-  - Go 1.21.1  
-  - Zig 0.11.0  
-  - Python 3.x + pip + venv + Miniconda  
-  - Node.js and npm  
+- Pop!_OS 22.04 or newer
+- Internet connection
 
-- **Databases:**  
-  - MySQL Server  
-  - MongoDB 6.0  
-  - PostgreSQL (latest stable)  
+---
 
-- **Containers & DevOps:**  
-  - Docker 20+  
-  - Docker Compose  
-  - Podman  
+## 📜 Usage
 
-- **Web Browsers:**  
-  - Google Chrome Dev  
-  - Brave Browser  
-
-- **IDEs & Editors (via Flatpak):**  
-  - Visual Studio Code  
-  - IntelliJ IDEA Community  
-  - PyCharm Community  
-  - WebStorm  
-  - Android Studio  
-
-- **Popular Flatpak Apps:**  
-  - VLC  
-  - Discord  
-  - Telegram  
-  - OBS Studio  
-  - Obsidian  
-  - Zoom  
-  - qBittorrent  
-  - AniDL GUI  
-
-- **Other Tools:**  
-  - Flutter SDK (via Snap)  
-  - Fastfetch (modern Neofetch)  
-  - Oh My Zsh (terminal setup)  
-  - TLP (power optimization)  
-  - auto-cpufreq (CPU power tuning)  
-
-## Requirements
-
-- Pop!_OS 22.04 or Ubuntu 22.04-based distro  
-- sudo privileges  
-- Active internet connection 
-
-## Usage
-
-1. Download or clone this repository:
+1. Clone the repository:
    ```bash
    git clone https://github.com/emonislive/popos-developer-setup-script.git
    cd popos-developer-setup-script
    ```
-2. Make the script executable:
+2. Run the Script:
    ```bash
    chmod +x full_development_setup.sh
-   ```
-3. Run the script:
-   ```bash
    ./full_development_setup.sh
    ```
-4. Restart your computer after completion to apply all changes.
-   ```bash
-   sudo reboot now
-   ```
-
-## Notes
-
-- The script may take some time depending on your internet and hardware.
-- Some components like Miniconda and Flutter use separate installers/snaps.
-- The script will set Zsh as your default shell and install Oh My Zsh automatically.
-- Docker group changes require a system reboot to take full effect.
-  
+### Note: Use sudo only when prompted. The script will handle privilege elevation as needed.
