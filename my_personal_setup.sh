@@ -2,7 +2,6 @@
 # Automated Developer Setup Script for Any User (Pop!_OS / Ubuntu / Debian)
 # Date: 2025-08-14
 
-# --- Detect Current User & Home ---
 CURRENT_USER=$(whoami)
 HOME_DIR=$(eval echo "~$CURRENT_USER")
 
@@ -50,6 +49,10 @@ install_snap_pkg() {
 SNAP_PACKAGES=(
     "code --classic"
     "postman"
+    "intellij-idea-community --classic"
+    "pycharm-community --classic"
+    "android-studio --classic"
+    "webstorm --classic"
 )
 
 echo "[3/8] Installing Snap packages..."
@@ -59,7 +62,7 @@ for snap_entry in "${SNAP_PACKAGES[@]}"; do
     install_snap_pkg "$snap_name" "$snap_flags"
 done
 
-# --- Install Flatpak apps ---
+# --- Install Flatpak packages ---
 install_flatpak_pkg() {
     if ! flatpak list | grep -q "$1"; then
         echo "Installing $1 via flatpak..."
@@ -70,7 +73,12 @@ install_flatpak_pkg() {
 }
 
 FLATPAK_PACKAGES=(
-    "com.spotify.Client"
+    "ro.go.hmlendea.DL-Desktop"
+    "com.rtosta.zapzap"
+    "md.obsidian.Obsidian"
+    "io.github.flattool.Warehouse"
+    "com.github.tchx84.Flatseal"
+    "io.github.realmazharhussain.GdmSettings"
 )
 
 echo "[4/8] Installing Flatpak packages..."
